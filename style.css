@@ -2,6 +2,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
+	text-align: center;
 }
 
 header {
@@ -24,6 +25,7 @@ header ul {
 header li {
 	display: inline-block;
 	list-style-type: none;
+	padding: 0px 5px 0px 5px;
 }
 
 button {
@@ -33,6 +35,7 @@ button {
 	width: 70px;
 	height: 30px;
 	vertical-align: middle;
+	border-radius: 2px;
 }
 
 #input-tweet {
@@ -42,21 +45,15 @@ button {
 	height: 30px;
 	padding-left: 4px;
 	padding-right: 4px;
+	border-radius: 2px;
 }
 
 .stream-wrapper {
-	width: 45%;
+	width: 40%;
 	background-color: #519548;
-	padding: 10px;
 	text-align: center;
-}
-
-#home-stream-wrapper {
-	float: left;
-}
-
-#user-stream-wrapper {
-	float: right;
+	border-radius: 10px;
+	display: inline-block;
 }
 
 h2 {
@@ -67,8 +64,17 @@ h2 {
 	text-align: left;
 }
 
-.tweet-meta {
-	background-color: #EAFDE6;
+.stream ul {
+	vertical-align: middle;
+	margin: 0.5em 0em 0.5em 0em;
+}
+.stream li {
+	display: inline-block;
+	height: 100%;
+	padding: 0px 10px 0px 10px;
+}
+
+.tweet-author {
 	color: white;
 	display: inline-block;
 }
@@ -76,4 +82,9 @@ h2 {
 .tweet-content {
 	background-color: #EAFDE6;
 	display: inline-block;
+}
+
+.tweet-timestamp {
+	color: white;
+	font-size: 12px;
 }

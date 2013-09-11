@@ -43,20 +43,21 @@
           $('.stream').html('');
 
           for(var i = tweets.length - 1; i >= 0; i--){
-            var tweet = tweets[i];
-            var metaInfo = '<ul><li><div class=".tweet-meta">'
-              + tweet.user
-              + '<br/>'tweet.created_at.toDateString()
-              + '<br/>'
-              + tweet.created_at.toLocaleTimeString()
-              + '</div></li>';
-            var tweetContent = '<li><div class=".tweet-content">'
-              + tweet.message
-              + '</div></li></ul>';
-            var $tweet = $('<div></div>');
-            $tweet.text('@' + tweet.user + ' (' + tweet.created_at.toLocaleString() + '): ' + tweet.message);
-            $tweet.appendTo('#home-tweets');
+            $('#home-tweets').append(formatTweet(tweets[i]));
           }
+        }
+
+        var formatTweet = function(tweet){
+          var tweetHTML = '<ul><li><div class="tweet-author">'
+            + tweet.user
+            + '</div></li><li><div class="tweet-content">'
+            + tweet.message
+            + '</div><div class="tweet-timestamp">'
+            + tweet.created_at.toLocaleTimeString()
+            + ' '
+            + tweet.created_at.toDateString()
+            + '</div></li></ul>';
+          return tweetHTML;
         }
 
         var animateButton = function(id){
@@ -66,12 +67,6 @@
 
         refreshStreams(streams.home);
         //setInterval(maybeRefreshPrimary, 10);
-
-        var getTimeStamp = function(tweet){
-          var tweetDate = tweet.created_at.toDateString();
-          var tweetTime = tweet.created_at.toLocaleTimeString();
-          return tweetTime + ' ' + tweetDate;
-        }
 
         $('#refresh').on('click',refreshStreams);
         $('#input-tweet').on('click',function(){
