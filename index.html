@@ -18,18 +18,20 @@
     </header>
     
     <div class='stream-wrapper' id='home-stream-wrapper'>
-      <h2>Home Stream</h2>
+      <h2>All Tweets</h2>
       <table class='stream' id='home-tweets'></table>
     </div>
 
     <div class='stream-wrapper' id='user-stream-wrapper'>
-      <h2><span id='title-user'>User</span>'s Stream</h2>
+      <h2><span id='title-user'>User's</span> Tweets</h2>
       <p>Click on a user to view his/her stream</p>
       <table class='stream' id='user-tweets'>
       </table>
     </div>
 
     <script>
+      var visitor = 'You';
+      streams.users.You = [];
 
       $(document).ready(function(){
         
@@ -48,6 +50,7 @@
 
         var refreshStream = function(whichStream){
           animateButton('#refresh');
+
           var targetStream;
           if(whichStream === 'home'){
             tweets = streams.home;
@@ -56,7 +59,8 @@
           else{
             tweets = streams.users[selectedUser];
             targetStream = '#user-tweets';
-            $('#title-user').text(selectedUser);
+            var titleChange = selectedUser + (selectedUser === 'You' ? 'r' : "'s");
+            $('#title-user').text(titleChange);
           }
           $(targetStream).html('');
 
@@ -92,11 +96,17 @@
         });
         $('#input-tweet').on('click',function(){
           $(this).val('');
-        })
+        });
+        $('#submit-tweet').on('click',function(){
+          animateButton('#submit-tweet');
+          var userInput = $('#input-tweet').val();
+          writeTweet(userInput);
+          refreshStream('home');
+        });
         $('.tweet-author').on('click',function(){
           selectedUser = $(this).text();
           refreshStream(selectedUser);
-        })
+        });
 
       });
 
