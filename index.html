@@ -3,22 +3,80 @@
   <head>
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
   </head>
   <body>
+    <header>
+      <ul>
+        <li><button id='refresh'>Refresh</button></li>
+        <li><input id='input-tweet' type='text' value='Compose New Tweet Here'></li>
+        <li><button id='submit-tweet'>Submit</button></li>
+      </ul>
+    </header>
+    
+    <div class='stream-wrapper' id='home-stream-wrapper'>
+      <h2>Home Stream</h2>
+      <div class='stream' id='home-tweets'></div>
+    </div>
+
+    <div class='stream-wrapper' id='user-stream-wrapper'>
+      <h2><span id='title-user'>User</span>'s Stream</h2>
+      <div class='stream' id='user-tweets'>
+        <p>Click on a user to view his/her stream</p>
+      </div>
+    </div>
+
     <script>
 
       $(document).ready(function(){
-        var $body = $('body');
-        $body.html('');
+        var countOfTweets = 0;
 
-        var index = streams.home.length - 1;
-        while(index >= 0){
-          var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo($body);
-          index -= 1;
+        var checkTweets = function(tweets){
+          if(tweets.length > countOfTweets){
+            countOfTweets = tweets.length
+            refreshStreams();
+          }
         }
+
+        var refreshStreams = function(tweets){
+          animateButton('#refresh');
+          $('.stream').html('');
+
+          for(var i = tweets.length - 1; i >= 0; i--){
+            var tweet = tweets[i];
+            var metaInfo = '<ul><li><div class=".tweet-meta">'
+              + tweet.user
+              + '<br/>'tweet.created_at.toDateString()
+              + '<br/>'
+              + tweet.created_at.toLocaleTimeString()
+              + '</div></li>';
+            var tweetContent = '<li><div class=".tweet-content">'
+              + tweet.message
+              + '</div></li></ul>';
+            var $tweet = $('<div></div>');
+            $tweet.text('@' + tweet.user + ' (' + tweet.created_at.toLocaleString() + '): ' + tweet.message);
+            $tweet.appendTo('#home-tweets');
+          }
+        }
+
+        var animateButton = function(id){
+          $(id).fadeTo('fast', 0.1);
+          $(id).fadeTo('fast', 1);
+        }
+
+        refreshStreams(streams.home);
+        //setInterval(maybeRefreshPrimary, 10);
+
+        var getTimeStamp = function(tweet){
+          var tweetDate = tweet.created_at.toDateString();
+          var tweetTime = tweet.created_at.toLocaleTimeString();
+          return tweetTime + ' ' + tweetDate;
+        }
+
+        $('#refresh').on('click',refreshStreams);
+        $('#input-tweet').on('click',function(){
+          $(this).val('');
+        })
 
       });
 
