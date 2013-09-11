@@ -17,7 +17,7 @@ header {
 }
 
 header ul {
-	margin: 15px auto 15px auto;
+	margin: 15px 0px 15px 0px;
 	width: 100%;
 	height: 45px;
 }
@@ -62,26 +62,33 @@ h2 {
 
 .stream {
 	text-align: left;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
-.stream ul {
-	vertical-align: middle;
-	margin: 0.5em 0em 0.5em 0em;
+.stream tr {
+	margin-bottom: 10px;
 }
-.stream li {
+
+.stream td {
+	vertical-align: top;
+	padding: 0px 10px 15px 10px;
+}
+
+.col1 {
+	color: white;
 	display: inline-block;
-	height: 100%;
-	padding: 0px 10px 0px 10px;
+	margin-top: 5px;
 }
 
 .tweet-author {
-	color: white;
-	display: inline-block;
+	font-weight: bold;
 }
 
 .tweet-content {
 	background-color: #EAFDE6;
-	display: inline-block;
+	padding: 5px 5px 5px 5px;
+	border-radius: 3px;
 }
 
 .tweet-timestamp {

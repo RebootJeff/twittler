@@ -7,6 +7,9 @@
   </head>
   <body>
     <header>
+
+<!-- THIS ul HAS AN EXTENDED WIDTH. WHYYYYY?! -->
+
       <ul>
         <li><button id='refresh'>Refresh</button></li>
         <li><input id='input-tweet' type='text' value='Compose New Tweet Here'></li>
@@ -16,47 +19,60 @@
     
     <div class='stream-wrapper' id='home-stream-wrapper'>
       <h2>Home Stream</h2>
-      <div class='stream' id='home-tweets'></div>
+      <table class='stream' id='home-tweets'></table>
     </div>
 
     <div class='stream-wrapper' id='user-stream-wrapper'>
       <h2><span id='title-user'>User</span>'s Stream</h2>
-      <div class='stream' id='user-tweets'>
-        <p>Click on a user to view his/her stream</p>
-      </div>
+      <p>Click on a user to view his/her stream</p>
+      <table class='stream' id='user-tweets'>
+      </table>
     </div>
 
     <script>
 
       $(document).ready(function(){
+        
+        /* for possible notification system
         var countOfTweets = 0;
-
         var checkTweets = function(tweets){
           if(tweets.length > countOfTweets){
             countOfTweets = tweets.length
             refreshStreams();
           }
         }
+        setInterval(checkTweets,10);
+        */
 
-        var refreshStreams = function(tweets){
+        var selectedUser = 'User';
+
+        var refreshStream = function(whichStream){
           animateButton('#refresh');
-          $('.stream').html('');
+          var targetStream;
+          if(whichStream === 'home'){
+            tweets = streams.home;
+            targetStream = '#home-tweets';
+          }
+          else{
+            tweets = streams.users[selectedUser];
+            targetStream = '#user-tweets';
+            $('#title-user').text(selectedUser);
+          }
+          $(targetStream).html('');
 
           for(var i = tweets.length - 1; i >= 0; i--){
-            $('#home-tweets').append(formatTweet(tweets[i]));
+            $(targetStream).append(formatTweet(tweets[i]));
           }
         }
 
         var formatTweet = function(tweet){
-          var tweetHTML = '<ul><li><div class="tweet-author">'
+          var tweetHTML = '<tr><td class="col1"><span class="tweet-author">'
             + tweet.user
-            + '</div></li><li><div class="tweet-content">'
-            + tweet.message
-            + '</div><div class="tweet-timestamp">'
-            + tweet.created_at.toLocaleTimeString()
-            + ' '
+            + '</span><br/><span class="tweet-timestamp">'
+            + tweet.created_at.toLocaleTimeString() + '<br/>'
             + tweet.created_at.toDateString()
-            + '</div></li></ul>';
+            + '</span></td><td><div class="tweet-content">'
+            + tweet.message + '</div></td></tr>';
           return tweetHTML;
         }
 
@@ -65,12 +81,21 @@
           $(id).fadeTo('fast', 1);
         }
 
-        refreshStreams(streams.home);
+        refreshStream('home');
         //setInterval(maybeRefreshPrimary, 10);
 
-        $('#refresh').on('click',refreshStreams);
+        $('#refresh').on('click',function(){
+          refreshStream('home');
+          if(selectedUser != 'User'){
+            refreshStream(selectedUser);
+          }
+        });
         $('#input-tweet').on('click',function(){
           $(this).val('');
+        })
+        $('.tweet-author').on('click',function(){
+          selectedUser = $(this).text();
+          refreshStream(selectedUser);
         })
 
       });
