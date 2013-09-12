@@ -3,6 +3,7 @@ body {
 	padding: 0;
 	font-family: sans-serif;
 	text-align: center;
+	background-color: #EAFDE6;
 }
 
 header {
@@ -46,17 +47,25 @@ button {
 	border-radius: 2px;
 }
 
-/* PROBLEM: These are the 2 main, green divs. They are not
-aligned the way I'd expect unless they both contain the same
-number of elements. */
+/* PROBLEM: How can I get the 2 (green) feeds to be
+side-by-side AND in the middle of the page */
 .stream-wrapper {
-	width: 40%;
+	width: 45%;
 	background-color: #519548;
 	text-align: center;
 	border-radius: 10px;
-	display: inline-block;
 	color: white;
-	margin: 0px 10px;
+	display: inline-block;
+}
+
+#home-stream-wrapper {
+	float: left;
+	margin: 0px 10px 0px 20px;
+}
+
+#user-stream-wrapper {
+	float: right;
+	margin: 0px 20px 0px 10px;
 }
 
 h2 {
@@ -85,6 +94,12 @@ h2 {
 
 .tweet-author {
 	font-weight: bold;
+	color: white;
+	text-decoration: none;
+}
+
+.tweet-author:hover {
+	text-decoration: underline;
 }
 
 .tweet-timestamp {
@@ -94,7 +109,7 @@ h2 {
 
 .tweet-content {
 	color: black;
-    background: #EAFDE6;
+    background-color: #EAFDE6;
     border-radius: 3px;
     padding: 10px;
     position: relative;

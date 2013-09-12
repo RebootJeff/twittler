@@ -14,16 +14,18 @@
       </ul>
     </header>
     
-    <div class='stream-wrapper' id='home-stream-wrapper'>
-      <h2>All Tweets</h2>
-      <table class='stream' id='home-tweets'></table>
-    </div>
+    <div id='stream-container'>
+      <div class='stream-wrapper' id='home-stream-wrapper'>
+        <h2>All Tweets</h2>
+        <table class='stream' id='home-tweets'></table>
+      </div>
 
-    <div class='stream-wrapper' id='user-stream-wrapper'>
-      <h2><span id='title-user'>User's</span> Tweets</h2>
-      <p>Click on a user to view his/her stream</p>
-      <table class='stream' id='user-tweets'>
-      </table>
+      <div class='stream-wrapper' id='user-stream-wrapper'>
+        <h2><span id='title-user'>User's</span> Tweets</h2>
+        <p>Click on a user to view his/her stream</p>
+        <table class='stream' id='user-tweets'>
+        </table>
+      </div>
     </div>
 
     <script>
@@ -67,9 +69,9 @@
         }
 
         var formatTweet = function(tweet){
-          var tweetHTML = '<tr><td class="col1"><span class="tweet-author">'
+          var tweetHTML = '<tr><td class="col1"><a href="#" class="tweet-author">'
             + tweet.user
-            + '</span><br/><span class="tweet-timestamp">'
+            + '</a><br/><a class="tweet-timestamp">'
             + tweet.created_at.toLocaleTimeString() + '<br/>'
             + tweet.created_at.toDateString()
             + '</span></td><td><div class="tweet-content">'
