@@ -16,11 +16,8 @@ header {
 	display: inline-block;
 }
 
-/* PROBLEM: There is something WRONG with this ul because its
-actual width is larger than its calculated width! WHAT?! */
 header ul {
 	margin: 15px 0px;
-	width: 100%;
 	height: 45px;
 }
 
