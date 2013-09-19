@@ -1,0 +1,369 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"get",
+				"getElementsByClassName"
+			],
+			[
+				"expe",
+				"expectedNodes"
+			],
+			[
+				"str",
+				"stringifyJSON"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"re",
+				"refresh"
+			],
+			[
+				"refre",
+				"refreshStream"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"toLoc",
+				"toLocaleTimeString"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"rand",
+				"randIndex"
+			],
+			[
+				"ar",
+				"arguments"
+			],
+			[
+				"old",
+				"oldResults"
+			],
+			[
+				"already",
+				"alreadyCalled"
+			],
+			[
+				"tru",
+				"truthTest"
+			],
+			[
+				"test",
+				"testResult"
+			],
+			[
+				"coll",
+				"collection"
+			],
+			[
+				"func",
+				"function"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "data_generator.js",
+			"settings":
+			{
+				"buffer_size": 2645,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 3379,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "style.css",
+			"settings":
+			{
+				"buffer_size": 1932,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 348.0,
+		"selected_items":
+		[
+			[
+				"package",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/jeff/Documents/Hack Reactor/pre-course work/2013-09-recursion/spec/fixtures.js",
+		"/home/jeff/Documents/Hack Reactor/pre-course work/2013-09-recursion/spec/stringifyJSONSpec.js",
+		"/home/jeff/Documents/Hack Reactor/pre-course work/2013-09-recursion/src/stringifyJSON.js",
+		"/home/jeff/Documents/Hack Reactor/pre-course work/2013-09-twittler/data_generator.js",
+		"/home/jeff/Documents/Hack Reactor/pre-course work/2013-09-twittler/index.html",
+		"/home/jeff/Documents/Hack Reactor/pre-course work/2013-09-twittler/style.css",
+		"/home/jeff/Documents/Hack Reactor/pre-course work/2013-09-underbar/spec/underbarSpec.js",
+		"/home/jeff/Documents/Hack Reactor/pre-course work/2013-09-underbar/src/underbar.js",
+		"/home/jeff/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/home/jeff/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/usr/share/applications/sublime.desktop",
+		"/home/jeff/Sites/rebootjeff.github.io/source/_includes/custom/asides/found_on.html",
+		"/home/jeff/usr/share/applications/sublime.desktop",
+		"/etc/default/speech-dispatcher",
+		"/home/jeff/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+		"/usr/share/applications/defaults.list"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"stringifiedPair",
+			"click",
+			"ul",
+			"visitor",
+			"refreshStreams",
+			"p",
+			"streams.home",
+			"refresh",
+			"pressed",
+			"refreshPrimary",
+			"button",
+			"primary",
+			"index",
+			"body",
+			"writeTweet",
+			"shuffledArray",
+			"result",
+			"prevResult",
+			"iterator",
+			".some",
+			"_.some",
+			"gedit.desktop",
+			"gedit",
+			"02"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"sublime.desktop"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "data_generator.js",
+					"settings":
+					{
+						"buffer_size": 2645,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 3379,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "style.css",
+					"settings":
+					{
+						"buffer_size": 1932,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

@@ -14,7 +14,7 @@
       </ul>
     </header>
     
-    <div id='stream-container'>
+    <section id='stream-container'>
       <div class='stream-wrapper' id='home-stream-wrapper'>
         <h2>All Tweets</h2>
         <table class='stream' id='home-tweets'></table>
@@ -26,7 +26,7 @@
         <table class='stream' id='user-tweets'>
         </table>
       </div>
-    </div>
+    </section>
 
     <script>
       var visitor = 'You';
@@ -85,7 +85,6 @@
         }
 
         refreshStream('home');
-        //setInterval(maybeRefreshPrimary, 10);
 
         $('#refresh').on('click',function(){
           refreshStream('home');
@@ -102,7 +101,7 @@
           writeTweet(userInput);
           refreshStream('home');
         });
-        $('.tweet-author').on('click',function(){
+        $('.stream').on('click','.tweet-author',function(){
           selectedUser = $(this).text();
           refreshStream(selectedUser);
         });
